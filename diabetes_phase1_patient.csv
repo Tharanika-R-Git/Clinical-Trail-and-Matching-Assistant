@@ -1,0 +1,2 @@
+patient_id,age,sex,diabetes_type,diagnosis_confirmed,hba1c,fasting_glucose_mg_dl,weight_kg,bmi,systolic_bp,diastolic_bp,diabetes_duration_years,current_glucose_lowering_medications,hypertension,cardiovascular_disease,kidney_disease,retinopathy,pregnancy,allergies,creatinine_mg_dl,egfr_ml_min_1_73m2,alt_u_l,ast_u_l,notes
+DM-001,52,Female,Type 2 Diabetes,Yes,8.4,172,82,30.1,140,90,6,Metformin,Yes,No,No,No,No,None reported,1.0,88,32,28,Synthetic patient for Phase 1 clinical-trial eligibility demonstration

@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: clinical_research_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+      - ./models:/app/models
+    environment:
+      - PYTHONPATH=/app
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: clinical_research_frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

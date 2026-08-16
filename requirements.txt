@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pydantic
+pandas
+numpy
+scikit-learn
+xgboost
+shap
+joblib
+sentence-transformers
+rank_bm25
+pytest
+httpx
+python-multipart
