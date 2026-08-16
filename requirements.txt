@@ -12,3 +12,6 @@ rank_bm25
 pytest
 httpx
 python-multipart
+Pillow
+opencv-python-headless
+rapidocr_onnxruntime

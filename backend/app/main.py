@@ -1,7 +1,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.api import trial_routes, patient_routes, matching_routes, analysis_routes, research_routes
+from backend.app.api import trial_routes, patient_routes, matching_routes, analysis_routes, research_routes, ocr_routes
 
 app = FastAPI(
     title="AI-Powered Clinical Research Assistant API",
@@ -24,6 +24,7 @@ app.include_router(patient_routes.router, prefix="/api/patients", tags=["Patient
 app.include_router(matching_routes.router, prefix="/api/matching", tags=["Matching"])
 app.include_router(analysis_routes.router, prefix="/api/analysis", tags=["Analysis"])
 app.include_router(research_routes.router, prefix="/api/research", tags=["Research"])
+app.include_router(ocr_routes.router, prefix="/api/ocr", tags=["OCR"])
 
 @app.get("/")
 def read_root():

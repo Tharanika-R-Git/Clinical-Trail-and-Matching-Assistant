@@ -4,8 +4,9 @@ import MatchingRanker from './components/MatchingRanker'
 import ClinicalTimeline from './components/ClinicalTimeline'
 import MLPredictor from './components/MLPredictor'
 import ResearchSynthesis from './components/ResearchSynthesis'
+import LabReportOCR from './components/LabReportOCR'
 
-type Tab = 'trial' | 'matching' | 'timeline' | 'ml' | 'research'
+type Tab = 'trial' | 'matching' | 'timeline' | 'ml' | 'research' | 'ocr'
 
 interface SelectedPatient {
   patient_id: string
@@ -20,6 +21,7 @@ export default function App() {
   const tabs: { id: Tab; label: string; icon: string }[] = [
     { id: 'trial', label: 'Trial Profile', icon: '🔬' },
     { id: 'matching', label: 'Patient Matching', icon: '🎯' },
+    { id: 'ocr', label: 'Lab Report OCR', icon: '🧪' },
     { id: 'timeline', label: 'Clinical Timeline', icon: '📈' },
     { id: 'ml', label: 'ML Predictor', icon: '🤖' },
     { id: 'research', label: 'Research Report', icon: '📋' },
@@ -97,6 +99,7 @@ export default function App() {
               }}
             />
           )}
+          {activeTab === 'ocr' && <LabReportOCR />}
           {activeTab === 'timeline' && (
             <ClinicalTimeline patientId={selectedPatient?.patient_id || null} />
           )}
