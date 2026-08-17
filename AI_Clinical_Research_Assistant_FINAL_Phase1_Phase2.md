@@ -57,8 +57,6 @@ The matching system must combine:
 - Match scoring
 - Missing-data detection
 - Evidence traceability
-- Ragobserve (refer pypi or Pranesh-2005/RagObserve)
-
 The result must be:
 
 ```text
